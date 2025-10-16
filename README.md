@@ -1,63 +1,51 @@
-project:
-  name: Real-Time Chat Application
-  description: >
-    A real-time group chat application built using Spring Boot, WebSocket, STOMP, and SockJS.
-    It allows multiple users to communicate instantly through a responsive web interface.
+# 🗨️ Real-Time Chat Application
 
-technologies:
-  backend:
-    - Java 17+
-    - Spring Boot
-    - WebSocket
-    - STOMP
-    - SockJS
-  frontend:
-    - HTML5
-    - Bootstrap 5
-    - JavaScript (STOMP.js, SockJS Client)
+A simple **real-time group chat** built using **Spring Boot**, **WebSocket**, **STOMP**, and **SockJS**.  
+It allows multiple users to send and receive messages instantly through a web interface.
 
-features:
-  - Real-time two-way messaging
-  - Message broadcasting to all users
-  - Lightweight and responsive UI
-  - Works with multiple concurrent clients
+---
 
-backend:
-  websocket_config:
-    - Endpoint: "/chat"
-    - Broker: "/topic"
-    - Prefix: "/app"
-  controller:
-    - sendMessage(): Handles and broadcasts messages
-    - chat(): Returns chat interface page
+## 🚀 Features
+- Real-time two-way messaging  
+- Broadcasts messages to all connected users  
+- Responsive and lightweight Bootstrap UI  
+- Supports multiple concurrent users  
 
-frontend:
-  - connect(): Establishes WebSocket connection
-  - sendMessage(): Sends messages to backend
-  - showMessage(): Displays messages in chat window
+---
 
-run_instructions:
-  prerequisites:
-    - Java 17 or higher
-    - Maven installed
-  steps:
-    - Clone repo:
-      ```bash
-      git clone https://github.com/your-username/realtime-chat-app.git
-      ```
-    - Run:
-      ```bash
-      mvn spring-boot:run
-      ```
-    - Access:
-      ```bash
-      http://localhost:8080
-      ```
+## 🛠️ Tech Stack
+**Backend:**  
+- Java 17+  
+- Spring Boot  
+- WebSocket + STOMP  
+- SockJS  
 
-author:
-  name: Mohd Rushaan Siddiqui
-  github: https://github.com/rushaan-siddiqui
-  linkedin: https://linkedin.com/in/mohd-rushaan-siddiqui
+**Frontend:**  
+- HTML5, CSS3  
+- Bootstrap 5  
+- JavaScript (STOMP.js, SockJS Client)
 
-license:
-  type: MIT
+---
+
+## ⚙️ WebSocket Configuration
+- **Endpoint:** `/chat`  
+- **Message Broker:** `/topic`  
+- **Application Prefix:** `/app`  
+
+**Key Methods:**
+- `sendMessage()`: Handles and broadcasts chat messages  
+- `chat()`: Loads the chat page  
+
+---
+
+## ▶️ Run Locally
+
+### Prerequisites
+- Java 17 or higher  
+- Maven installed  
+
+### Steps
+```bash
+git clone https://github.com/your-username/realtime-chat-app.git
+cd realtime-chat-app
+mvn spring-boot:run
